@@ -40,3 +40,35 @@ Asegúrate de tener instalado lo siguiente en tu entorno local:
    git clone [https://github.com/tu-usuario/nombre-del-repo.git](https://github.com/tu-usuario/nombre-del-repo.git)
    cd nombre-del-repo
    ```
+2. **Configurar la base de datos:**
+   Ejecuta el script SQL incluido en el proyecto (o crea una base de datos llamada crud_go y configura la tabla correspondiente).
+
+3. **Instalar dependencias:**
+
+```Bash
+go mod init crud_go
+go get -u [github.com/go-sql-driver/mysql](https://github.com/go-sql-driver/mysql)
+```
+
+4. **Ejecutar la aplicación:**
+
+```Bash
+go run main.go
+```
+
+5. **Abrir en el navegador:**
+   Visita http://localhost:8080 para interactuar con la aplicación.
+
+```
+👨‍💻 Autor
+Johan Sebastian Vasquez Diaz
+
+Ingeniero de Sistemas
+
+
+---
+
+Solo tienes que ajustar los enlaces de tu repositorio, tu LinkedIn y tu portafolio donde dice `tu-usuario` y `tu-enlace`.
+
+¿Te gustaría que empecemos a escribir el código del archivo `main.go` para inicializar el servidor y pr
+```
