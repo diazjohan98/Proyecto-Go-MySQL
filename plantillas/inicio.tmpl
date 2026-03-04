@@ -5,7 +5,7 @@
 <a name="" id="" class="btn btn-primary" href="/crear" role="button"
   >Agregar empleado</a
 >
-
+<br /><br />
 <table class="table">
   <thead>
     <tr>
@@ -22,7 +22,15 @@
       <td>{{ .Nombre }}</td>
       <td>{{ .Correo }}</td>
       <td>
-        Editar {{ .Id }} |
+        <a
+          name=""
+          id=""
+          class="btn btn-warning"
+          href="/editar?id={{.Id}}"
+          role="button"
+          >Editar</a
+        >
+        |
         <a
           name=""
           id=""
