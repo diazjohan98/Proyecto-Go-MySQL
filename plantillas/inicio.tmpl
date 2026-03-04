@@ -5,7 +5,7 @@
 <a name="" id="" class="btn btn-primary" href="/crear" role="button"
   >Agregar empleado</a
 >
-
+<br /><br />
 <table class="table">
   <thead>
     <tr>
@@ -16,13 +16,35 @@
     </tr>
   </thead>
   <tbody>
+    {{ range. }}
     <tr>
-      <th scope="row">1</th>
-      <td>Ana</td>
-      <td>ana@example.com</td>
-      <td>Editar | Borrar</td>
+      <th scope="row">{{ .Id }}</th>
+      <td>{{ .Nombre }}</td>
+      <td>{{ .Correo }}</td>
+      <td>
+        <a
+          name=""
+          id=""
+          class="btn btn-warning"
+          href="/editar?id={{.Id}}"
+          role="button"
+          >Editar</a
+        >
+        |
+        <a
+          name=""
+          id=""
+          class="btn btn-danger"
+          href="/borrar?id={{.Id}}"
+          role="button"
+          >Borrar</a
+        >
+      </td>
     </tr>
   </tbody>
+  {{
+    end
+  }}
 </table>
 
 {{ template "pie" }}
