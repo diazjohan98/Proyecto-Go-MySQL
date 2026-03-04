@@ -1,56 +1,56 @@
 {{ define "editar" }}
 {{ template "cabecera" }}
 
-<div class="card">
-  <div class="card-header">Empleados</div>
-
-  <div class="card-body">
-    <form method="post" action="/actualizar">
-      <input
-        type="hidden"
-        value="{{.Id}}"
-        class="form-control"
-        name="id"
-        id="id"
-        placeholder=""
-      />
-      <div class="form-group">
-        <label for="">Nombre:</label>
-        <input
-          type="text"
-          class="form-control"
-          name="nombre"
-          value="{{.Nombre}}"
-          id="nombre"
-          aria-describedby="helpId"
-          placeholder=""
-        />
-        <small id="helpId" class="form-text text-muted"
-          >Escribe tu nombre</small
-        >
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card shadow-sm">
+      <div class="card-header bg-white mt-2">
+        <h4 class="mb-0 text-secondary">Editar Empleado</h4>
       </div>
+      <div class="card-body">
+        <form method="post" action="/actualizar">
+          <input type="hidden" value="{{.Id}}" name="id" id="id" />
 
-      <div class="form-group">
-        <label for="">Correo</label>
-        <input
-          type="text"
-          class="form-control"
-          name="correo"
-          value="{{.Correo}}"
-          id="correo"
-          aria-describedby="helpId"
-          placeholder=""
-        />
-        <small id="helpId" class="form-text text-muted"
-          >Escribe tu correo</small
-        >
+          <div class="form-group">
+            <label for="nombre" class="font-weight-bold"
+              >Nombre Completo:</label
+            >
+            <input
+              type="text"
+              class="form-control bg-light"
+              name="nombre"
+              value="{{.Nombre}}"
+              id="nombre"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="correo" class="font-weight-bold"
+              >Correo Electrónico:</label
+            >
+            <input
+              type="email"
+              class="form-control bg-light"
+              name="correo"
+              value="{{.Correo}}"
+              id="correo"
+              required
+            />
+          </div>
+
+          <hr class="mt-4" />
+          <div class="d-flex justify-content-end">
+            <a class="btn btn-outline-secondary mr-2" href="/" role="button"
+              >Cancelar</a
+            >
+            <button type="submit" class="btn btn-warning shadow-sm">
+              Actualizar Empleado
+            </button>
+          </div>
+        </form>
       </div>
-
-      <button type="submit" class="btn btn-primary">Modificar empleado</button>
-      <a name="" id="" class="btn btn-success" href="/" role="button"
-        >Cancelar</a
-      >
-    </form>
+    </div>
   </div>
 </div>
 
